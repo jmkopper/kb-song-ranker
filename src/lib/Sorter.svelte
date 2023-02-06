@@ -119,9 +119,11 @@ M: {merged}
     {rightMergeSet[0]}
   </button>
   {:else}
+  <div style="display: inline-block; text-align: left;">
     <ol>
     {#each merged as m}
       <li>{m}</li>
     {/each}
     </ol>
+  </div>
 {/if}
