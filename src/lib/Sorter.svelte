@@ -89,24 +89,8 @@
   }
 </script>
 
-<style>
-	main {
-		--bg-primary: #d0d0d0;
-		--color-primary: #202020;
-		--text-base: 1rem;
-		--button-bg: var(--bg-primary);
-		--button-color: var(--color-primary);
-		--button-font-size: var(--text-base);
-	}
-
-  button {
-		background-color: var(--button-bg);
-		color: var(--button-color);
-		font-size: var(--button-font-size);
-  }
-</style>
-
-<p>
+<!-- debug -->
+<!-- <p>
 A: {leftMergeSet}
 </p>
 
@@ -122,25 +106,22 @@ M: {merged}
   {#each mergeStack as m}
   <li> {m} </li>
   {/each}
-</ul>
+</ul> -->
 
-<main>
-  <section>
-    {#if !mergedFlag}
-    <button on:click={() => merge("left")}>
-      {leftMergeSet[0]}
-    </button>
-    <br />
-    <br />
-    <button on:click={() => merge("right")}>
-      {rightMergeSet[0]}
-    </button>
-    {:else}
-      <ol>
-      {#each merged as m}
-        <li>{m}</li>
-      {/each}
-      </ol>
-    {/if}
-  </section>
-</main>
+{#if !mergedFlag}
+  <h2>Which do you like better?</h2>
+  <button on:click={() => merge("left")}>
+    {leftMergeSet[0]}
+  </button>
+  <br />
+  <br />
+  <button on:click={() => merge("right")}>
+    {rightMergeSet[0]}
+  </button>
+  {:else}
+    <ol>
+    {#each merged as m}
+      <li>{m}</li>
+    {/each}
+    </ol>
+{/if}

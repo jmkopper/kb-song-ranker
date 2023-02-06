@@ -3,7 +3,7 @@
 </script>
 
 <main>
-  <h1>Very Cool Merge Sorter</h1>
+  <h1>Kate Bush Song Ranker</h1>
 
   <div class="card">
     <Sorter />
