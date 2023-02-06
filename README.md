@@ -1,6 +1,6 @@
 # kb-song-ranker
 
-Svelte app for ranking Kate Bush's singles. List of singles is a (lightly) edited list consisting of Bush's singles that charted in the U.K.:
+Svelte app for ranking Kate Bush's singles. [Try it out](https://kb-song-ranker.vercel.app/). List of singles is a (lightly) edited list consisting of Bush's singles that charted in the U.K.:
 
 - Wuthering Heights
 - The Man with the Child in His Eyes
@@ -14,7 +14,7 @@ Svelte app for ranking Kate Bush's singles. List of singles is a (lightly) edite
 - The Dreaming
 - There Goes a Tenner
 - Running Up That Hill
-- Cloudbursting
+- Cloudbusting
 - Hounds of Love
 - The Big Sky
 - Don't Give Up
