@@ -1,5 +1,5 @@
 <script>
-  import Sorter from './lib/Sorter.svelte'
+  import Sorter from './Sorter.svelte'
 </script>
 
 <main>

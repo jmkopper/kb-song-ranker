@@ -45,19 +45,19 @@
   let toMerge = shuffle(kbSongs);
   let merged = [];
   let mergedFlag = false;
-  let mergeStack = toMerge.map(e => [e]);
-  let leftMergeSet = mergeStack.shift();
-  let rightMergeSet = mergeStack.shift();
+  let mergeDequeue = toMerge.map(e => [e]);
+  let leftMergeSet = mergeDequeue.shift();
+  let rightMergeSet = mergeDequeue.shift();
 
   function checkMerged() {
-    if (leftMergeSet.length == 0 && rightMergeSet.length == 0 && mergeStack.length == 0) {
+    if (leftMergeSet.length == 0 && rightMergeSet.length == 0 && mergeDequeue.length == 0) {
       mergedFlag = true;
     } else if (leftMergeSet.length == 0 && rightMergeSet.length == 0) {
-      mergeStack.push(merged);
+      mergeDequeue.push(merged);
       merged = [];
-      leftMergeSet = mergeStack.shift();
-      rightMergeSet = mergeStack.shift();
-      mergeStack = mergeStack;
+      leftMergeSet = mergeDequeue.shift();
+      rightMergeSet = mergeDequeue.shift();
+      mergeDequeue = mergeDequeue;
     } else if (leftMergeSet.length == 0) {
       merged.push(rightMergeSet.pop());
       merged = merged;
@@ -80,33 +80,7 @@
     merged = merged;
     checkMerged();
   }
-
-  function mergeSort(arr) {
-    let i = 0;
-    while (i < 1) {
-      console.log("asdf");
-    }
-  }
 </script>
-
-<!-- debug -->
-<!-- <p>
-A: {leftMergeSet}
-</p>
-
-<p>
-B: {rightMergeSet}
-</p>
-
-<p>
-M: {merged}
-</p>
-
-<ul>
-  {#each mergeStack as m}
-  <li> {m} </li>
-  {/each}
-</ul> -->
 
 {#if !mergedFlag}
   <h2>Which do you like better?</h2>
