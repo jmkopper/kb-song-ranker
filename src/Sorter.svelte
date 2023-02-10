@@ -1,5 +1,5 @@
 <script>
-  import {kbSongs} from './kbsongs.js';
+  export let list;
   function shuffle(array) {
     // Fisher-Yates shuffle
     let currentIndex = array.length,  randomIndex;
@@ -12,7 +12,7 @@
     return array;
   }
 
-  let toMerge = shuffle(kbSongs);
+  let toMerge = shuffle(list);
   let merged = [];
   let mergedFlag = false;
   let mergeDequeue = toMerge.map(e => [e]);
