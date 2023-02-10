@@ -1,4 +1,5 @@
 <script>
+  import {kbSongs} from './kbsongs.js';
   function shuffle(array) {
     // Fisher-Yates shuffle
     let currentIndex = array.length,  randomIndex;
@@ -11,37 +12,6 @@
     return array;
   }
 
-  let kbSongs = [
-    "Wuthering Heights",
-    "The Man with the Child in His Eyes",
-    "Hammer Horror",
-    "Wow",
-    "Breathing",
-    "Babooshka",
-    "Army Dreamers",
-    "December Will Be Magic Again",
-    "Sat in Your Lap",
-    "The Dreaming",
-    "There Goes a Tenner",
-    "Running Up That Hill",
-    "Cloudbusting",
-    "Hounds of Love",
-    "The Big Sky",
-    "Don't Give Up",
-    "Experiment IV",
-    "The Sensual World",
-    "This Woman's Work",
-    "Love and Anger",
-    "Rocket Man",
-    "Rubberband Girl",
-    "Moments of Pleasure",
-    "The Red Shoes",
-    "The Man I Love",
-    "And So Is Love",
-    "King of the Mountain",
-    "Lyra",
-    "Deeper Understanding",
-  ];
   let toMerge = shuffle(kbSongs);
   let merged = [];
   let mergedFlag = false;
@@ -85,12 +55,12 @@
 {#if !mergedFlag}
   <h2>Which do you like better?</h2>
   <button on:click={() => merge("left")}>
-    {leftMergeSet[0]}
+    {leftMergeSet[0].name}
   </button>
   <br />
   <br />
   <button on:click={() => merge("right")}>
-    {rightMergeSet[0]}
+    {rightMergeSet[0].name}
   </button>
   {:else}
   <div style="display: inline-block; text-align: left;">
