@@ -66,7 +66,7 @@
   <div style="display: inline-block; text-align: left;">
     <ol>
     {#each merged as m}
-      <li>{m}</li>
+      <li>{m.name}</li>
     {/each}
     </ol>
   </div>
